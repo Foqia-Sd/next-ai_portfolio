@@ -1,20 +1,20 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
-import Services from "@/components/Services";
+import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
+import { Services } from "@/components/sections/services";
+import { Projects } from "@/components/sections/projects";
+import { Skills } from "@/components/sections/skills";
+import { Footer } from "@/components/sections/footer";
+import { Navbar } from "@/components/sections/navbar";
 
 export default function Home() {
   return (
-    <main className="bg-[#0A0F1C] min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
       <About />
       <Services />
       <Projects />
-      <Contact />
+      <Skills />
       <Footer />
     </main>
   );
