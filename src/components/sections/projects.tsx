@@ -6,68 +6,68 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "AI Agent Orchestration Platform",
+    title: "Pak Fashion Store (E-Commerce)",
     description:
-      "A multi-agent system built with the OpenAI Agents SDK. Agents collaborate to perform research, summarize, and generate structured outputs autonomously.",
-    tech: ["Python", "OpenAI SDK", "FastAPI", "Docker"],
+      "A full-stack e-commerce platform built with Next.js, featuring secure Clerk user authentication, product catalog browsing, shopping cart, and Stripe checkout integration.",
+    tech: ["Next.js", "Clerk Auth", "Tailwind CSS", "Stripe", "TypeScript"],
     github: "https://github.com/Foqia-Sd",
-    live: "",
-    color: "blue",
-    badge: "AI Agents",
-    image: "/projects/ai_agent.png",
-  },
-  {
-    title: "Full-Stack SaaS Dashboard",
-    description:
-      "A production-grade Next.js 15 SaaS application with authentication, billing, real-time data, and a pixel-perfect dashboard UI.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-    github: "https://github.com/Foqia-Sd",
-    live: "",
-    color: "cyan",
-    badge: "Full Stack",
-    image: "/projects/saas_dashboard.png",
-  },
-  {
-    title: "Full Stack E-commerce",
-    description:
-      "A modern, high-conversion e-commerce platform built with Next.js, featuring secure authentication via Clerk and a sleek dark-mode UI.",
-    tech: ["Next.js", "Clerk", "Tailwind", "Stripe"],
-    github: "https://github.com/Foqia-Sd",
-    live: "",
+    live: "https://full-stack-ecommerce-clerk.vercel.app/",
     color: "indigo",
-    badge: "E-commerce",
-    image: "/projects/ecommerce.png",
+    badge: "E-Commerce",
+    image: "/projects/ecommerce_clerk.png",
   },
   {
-    title: "Digital FTE Automation System",
+    title: "Lumina Glow Salon & Booking",
     description:
-      "An end-to-end automation system that mimics a full-time employee's workflow — intake, processing, reporting — powered by AI and Python scripts.",
-    tech: ["Python", "MCP", "Docker", "OpenAI"],
+      "An elegant luxury salon platform featuring traditional bridal glamour makeovers, service catalogs, and an intelligent appointment booking system.",
+    tech: ["Next.js", "AI Agent", "Tailwind CSS", "TypeScript"],
     github: "https://github.com/Foqia-Sd",
-    live: "",
-    color: "emerald",
-    badge: "Automation",
-    image: "/projects/automation.png",
+    live: "https://salon-demo-sage-three.vercel.app/",
+    color: "cyan",
+    badge: "AI Salon",
+    image: "/projects/salon_booking.png",
   },
   {
-    title: "Containerized Microservices API",
+    title: "BLOG Sphere",
     description:
-      "Loosely coupled microservices deployed with Docker and Kubernetes, featuring API gateway routing, health checks, and zero-downtime deployments.",
-    tech: ["Docker", "Kubernetes", "Node.js", "Nginx"],
+      "A modern, high-performance blog platform featuring rich article showcases, category navigation, clean typography, and responsive modern layout.",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     github: "https://github.com/Foqia-Sd",
-    live: "",
-    color: "rose",
-    badge: "DevOps",
-    image: "/projects/microservices.png",
-  },
-  {
-    title: "AI-Powered Portfolio",
-    description:
-      "This portfolio — built to feel like an AI-powered SaaS product. Glassmorphism UI, Framer Motion, futuristic design in Next.js 15.",
-    tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
-    github: "https://github.com/Foqia-Sd",
-    live: "#",
+    live: "https://blog-red-beta-62.vercel.app/",
     color: "purple",
+    badge: "Blog Site",
+    image: "/projects/tech_blog.png",
+  },
+  {
+    title: "Madina Builders Real Estate",
+    description:
+      "A comprehensive real estate platform for browsing luxury property listings, modern home architectures, interactive viewings, and agent inquiries.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/Foqia-Sd",
+    live: "https://real-estate-website-pi-two.vercel.app/",
+    color: "blue",
+    badge: "Real Estate",
+    image: "/projects/real_estate.png",
+  },
+  {
+    title: "AI Social Media Employee",
+    description:
+      "An autonomous AI employee agent system designed to create, schedule, and automatically post rich content across LinkedIn, Facebook, and Instagram.",
+    tech: ["Python", "OpenAI API", "Meta API", "LinkedIn API", "Docker"],
+    github: "https://github.com/Foqia-Sd",
+    live: "https://github.com/Foqia-Sd",
+    color: "emerald",
+    badge: "AI Automation",
+    image: "/projects/ai_social_employee.png",
+  },
+  {
+    title: "AI-Powered Developer Portfolio",
+    description:
+      "This interactive portfolio — built to feel like an AI-powered SaaS application. Features glassmorphism UI, Framer Motion, and Next.js 15 App Router.",
+    tech: ["Next.js 15", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    github: "https://github.com/Foqia-Sd",
+    live: "https://github.com/Foqia-Sd",
+    color: "rose",
     badge: "Portfolio",
     image: "/projects/portfolio.png",
   },
@@ -95,7 +95,7 @@ export function Projects() {
             badge="Work"
             title="Projects I've"
             highlight="Shipped"
-            subtitle="A selection of real systems I've designed, built, and deployed — from AI agents to full-stack applications."
+            subtitle="A selection of real applications and AI systems I've designed, built, and deployed live."
           />
         </div>
 
@@ -114,7 +114,7 @@ export function Projects() {
                 className={`glass rounded-2xl border border-slate-700/40 overflow-hidden flex flex-col transition-all duration-300 group ${c.border} ${c.glow}`}
               >
                 {/* Gradient image area */}
-                <div className={`relative h-36 sm:h-44 overflow-hidden flex-shrink-0`}>
+                <div className={`relative h-40 sm:h-48 overflow-hidden flex-shrink-0`}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${c.grad} opacity-30 z-10 mix-blend-overlay`} />
                   <Image
                     src={project.image}
@@ -152,13 +152,41 @@ export function Projects() {
                   <p className="text-slate-400 text-xs sm:text-sm leading-relaxed flex-1 mb-3 sm:mb-4">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.tech.map((t) => (
                       <span key={t}
                         className="px-2 py-0.5 rounded-md glass-lighter border border-slate-700/40 text-slate-400 text-[10px] sm:text-xs">
                         {t}
                       </span>
                     ))}
+                  </div>
+
+                  {/* Action links footer */}
+                  <div className="pt-3 mt-auto border-t border-slate-800/80 flex items-center justify-between gap-2">
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors group/link"
+                      >
+                        <span>Live Demo</span>
+                        <ExternalLink className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                      </a>
+                    ) : (
+                      <span className="text-xs text-slate-500">Live Demo</span>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-slate-200 transition-colors"
+                      >
+                        <Github className="w-3.5 h-3.5" />
+                        <span>Source</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -169,3 +197,4 @@ export function Projects() {
     </section>
   );
 }
+
